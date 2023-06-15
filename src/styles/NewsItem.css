@@ -1,0 +1,86 @@
+.news-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  width: 25em;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.news-item.read {
+  opacity: 0.7; /* Reduce the opacity of the entire card */
+  cursor: pointer; /* Change the cursor to default */
+}
+
+
+.news-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+}
+
+.news-item-image {
+  overflow: hidden;
+  margin-bottom: 0.5em;
+  position: relative;
+  height: 15em;
+  object-fit: cover;
+}
+
+.news-item-content {
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none !important;
+  gap: 1em;
+  flex-grow: 1;
+  object-fit: cover;
+  transform: scale(1);
+}
+
+.news-item:hover .news-item-image {
+  transform: scale(1.05);
+  transition: transform 0.7s ease-in-out;
+}
+
+.news-item-title {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.news-item-source {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.news-item-description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.news-item-button {
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  background: none;
+  color: black;
+  cursor: pointer;
+}
+
+.favorite-icon:hover {
+  color: red;
+}
